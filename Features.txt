@@ -1,0 +1,78 @@
+Based on RP2040 Raspberry Pi Pico.
+
+Minimal Serial Protocol:
+  Mainly for develpoment and debugging, allows:
+   - TrackPoint Reset / ReInit
+   - Reboot to Bootloader
+   - Toggle Debug-Output over Serial
+   - Show current status of enabled/disabled flags
+
+TrackPoint:
+ - MiddleBtn+Move => native Scroll x,y (with dynamic acceration speed from 1 to 16 )
+ - Fn+Move        => native Scroll x,y (same as MiddleBtn but with Fn)
+
+ Browser Back/Fore via Mouse
+ - Fn+LeftClick   => Mouse Btn 4 => Back
+ - Fn+RightClick  => Mouse Btn 5 => Forward
+ - Fn+MiddleClick => Mouse Btn 6
+
+ - Manual disable/enable via Fn+F8
+ - Manual Reset-Pulse (Fn+F9) and
+ - Manual Init (Fn+F10)
+
+
+Keyboard:
+ Fn-KeyCombos:
+  Dokumenten-Tasten:
+    Normal: AC_FORWARD AC_BACK
+    Fn: AC_FASTWORWARD, AC_REWIND
+
+  Fn+ThinkVantage = Reboot RP2040
+  Fn+MUTE = Mute Microphone via Win + Alt + K
+  Fn+ESC  = Toggle Debug-Mode (more Serial Output)
+  Fn+ScrollLock = Toggle NumLock-Key
+  Fn+F1  = F13
+  Fn+F2  = F14 : Lock Workstation : Emulate Win+L
+  Fn+F3  = F15
+  Fn+F4  = KEY_SYSTEM_SLEEP
+  Fn+F5  = F17 : Wifi : Emulate Win+A
+  Fn+F6  = F18
+  Fn+F7  = KEY_SYSTEM_PROJECT : Toggle internal/external screen : Emulate Win+P
+  Fn+F8  = F20 : TrackPoint/Touchpad-Key : Toggle Trackpoint on/off/restart ps/2
+  Fn+F9  = F21 : TrackPoint Reset
+  Fn+F10 = F22 : TrackPoint Init
+  Fn+F11 = F23 : TrackPoint toggle enable
+  Fn+F12 = KEY_SYSTEM_HIBERNATE (shutdown)
+  Fn+WIN = Toggle Windows-Key enable
+  Fn+Space = AC_ZOOM - does nothing in windows :/
+  Fn+1 = Home    = WebBrowser
+  Fn+2 = Browser = Explorer
+  Fn+3 = Email
+  Fn+4 = Search  = Windows Startmenu Search
+  Fn+5 = Refresh - Läd im Browser neu (wie F5)
+  Fn+6 = Bookmarks
+  Fn+^ = Stop    - Stoppt im Browser das Laden
+
+  Fn+UpArrow = KEY_MEDIA_STOP
+  Fn+DownArrow = KEY_MEDIA_PLAY_PAUSE
+  Fn+Leftrrow = KEY_MEDIA_PREV
+  Fn+RightArrow = KEY_MEDIA_NEXT
+
+  Fn+GUI      => Enable/disable GUI-Key
+  Fn+CAPS     => Enable/disable CAPS-Key
+  Fn+Pos1/End = Screen Brightness Control
+
+  Fn+CrlLk    => Working NumPad-Toggle (hold Fn to override Num-State)
+
+  Working 6KRO (original does not support MouseClicks while Keyboard-Key is pressed down - here it just works)
+
+  
+Future Features:
+ - ThinkLight control
+ - more refactoring
+ - Strg/Fn-SWAP
+ - On-Chip-Memory
+ - Serial-Protocol for sending text and macro management
+ - Record and Playback macros
+
+
