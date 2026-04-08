@@ -16,3 +16,11 @@ For my single build I used one of the PCBs I still had laying around from my fir
 Here you have my stuff, I hope anyone can make use of this somehow.
 
 The Pin-Connections are in the Excel-Sheet/PDF-File.
+
+## Further Development
+The next round will some more refactoring, putting everthing in nice classes instead of heaving a couple dozen functions in the main file.
+Be prepared for some changes in the near future.
+
+### More Info
+I also have a Reddit Post on r/thinkpads with more information on my X210Ai machine itself:
+https://www.reddit.com/r/thinkpad/comments/1sf64cm/x210ai_with_custom_keyboardcontroller/
